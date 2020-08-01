@@ -68,7 +68,7 @@ struct AppBannerParentView<Content, BannerModel>: View where Content: View,
                 .padding(.horizontal, 20)
                 .opacity(appBannerModel.isTextShowing == true ? 1.0 : 0.0)
                 .minimumScaleFactor(0.8)
-            //    .transition(.moveAndFade)
+                .transition(.moveAndFade)
             
             Spacer()
         }
