@@ -24,6 +24,7 @@ protocol GenericBannerModel : ObservableObject {
     var message: String { get }
 }
 
+
 class BasicBannerModel : GenericBannerModel {
     
     // MARK: - Properties
