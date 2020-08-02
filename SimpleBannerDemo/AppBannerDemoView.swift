@@ -19,7 +19,6 @@ struct AppBannerDemoView : View {
     let listArray = ["Information", "Warning", "Error", "Not Set"]
     var body: some View {
         
-        AppBannerParentView<VStack, AppBannerModel>() {
             VStack {
                 ForEach(listArray, id: \.self) { row in
                     
@@ -48,7 +47,6 @@ struct AppBannerDemoView : View {
                     
                 }
             }
-        }
     }
     
 }
