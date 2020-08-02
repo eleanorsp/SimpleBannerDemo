@@ -18,8 +18,8 @@ struct AppBannerDemoView : View {
     
     let listArray = ["Information", "Warning", "Error", "Not Set"]
     var body: some View {
-        
-            VStack {
+        NavigationView {
+            ScrollView {
                 ForEach(listArray, id: \.self) { row in
                     
                     HStack {
@@ -46,7 +46,8 @@ struct AppBannerDemoView : View {
                     }.padding(.top, 100)
                     
                 }
-            }
+            }.navigationBarTitle("App Banner")
+        }
     }
     
 }
