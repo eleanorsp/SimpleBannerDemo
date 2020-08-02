@@ -2,7 +2,7 @@ This simple banner written in SwiftUI which drops down for a few seconds showing
 
 
 
-<video src="https://raw.githubusercontent.com/eleanorsp/SimpleBannerDemo/master/mdImages/sim.mov"></video>
+<img src="https://raw.githubusercontent.com/eleanorsp/SimpleBannerDemo/master/mdImages/sim.gf" alt="Banner Example" style="zoom:10%;" />
 
 
 
