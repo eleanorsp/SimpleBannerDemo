@@ -15,8 +15,8 @@ struct AppBannerDemoView : View {
     @EnvironmentObject var appBannerModel : AppBannerModel
 
     // Build your list. Im using a vstack to contain areas to tap on to initiate
-    
     let listArray = ["Information", "Warning", "Error", "Not Set"]
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -25,6 +25,7 @@ struct AppBannerDemoView : View {
                     HStack {
                         Spacer()
                         
+                        // I know I'm not using a button here. Just trying out some other functionality.
                         Text(row).padding(.all, 30)
                             .background(Color.yellow)
                             .onTapGesture(count: 1) {

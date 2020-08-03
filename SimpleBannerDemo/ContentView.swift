@@ -12,6 +12,10 @@ struct ContentView: View {
         
         TabView {
             
+            // We create the parent view where the banner exists and embed your view inside it.
+            // Then we create the appropriate Model we wish to use with it. You can customise your own
+            // Model to do different actions. Want the banner customised? Then there's a solution for that too!
+            //
             AppBannerParentView<AppBannerDemoView, AppBannerModel>() {
                 AppBannerDemoView()
             }

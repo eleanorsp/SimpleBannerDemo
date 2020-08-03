@@ -20,7 +20,7 @@ struct AppBannerParentView<Content, BannerModel>: View where Content: View,
     @EnvironmentObject var appBannerModel: BannerModel
 
     var content: () -> Content
-    var banner: AppBannerClosureType? = nil // Will use default banner if not set.
+    var banner: AppBannerClosureType? = nil // Will use the default banner if not set, but you can build your own.
     
     var bannerFont: Font {
         if UIView().traitCollection.horizontalSizeClass == .compact {
@@ -60,6 +60,8 @@ struct AppBannerParentView<Content, BannerModel>: View where Content: View,
         }
     }
     
+    /// Creates the simple banner if your own closure is not set.
+    //
     func defaultBanner(screenWidth: CGFloat) -> some View {
         return HStack {
             Spacer()
@@ -79,7 +81,9 @@ struct AppBannerParentView<Content, BannerModel>: View where Content: View,
         .foregroundColor(appBannerModel.foregroundColor)
     }
 }
-    
+
+/// A simple transition.
+///
 extension AnyTransition {
     static var moveAndFade: AnyTransition {
         AnyTransition.slide
